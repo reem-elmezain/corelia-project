@@ -35,21 +35,21 @@ jobs:
 
       - name: Build & Push User Service Image
         run: |
-          cd corelia/services/user-services
+          cd services/user-services
           docker build -t user-service .
           docker tag user-service:latest ${{ steps.login-ecr.outputs.registry }}/user-service:latest
           docker push ${{ steps.login-ecr.outputs.registry }}/user-service:latest
 
       - name: Build & Push Order Service Image
         run: |
-          cd corelia/services/order-services
+          cd services/order-services
           docker build -t order-service .
           docker tag order-service:latest ${{ steps.login-ecr.outputs.registry }}/order-service:latest
           docker push ${{ steps.login-ecr.outputs.registry }}/order-service:latest
 
       - name: Build & Push Payment Service Image
         run: |
-          cd corelia/services/payment-services
+          cd services/payment-services
           docker build -t payment-service .
           docker tag payment-service:latest ${{ steps.login-ecr.outputs.registry }}/payment-service:latest
           docker push ${{ steps.login-ecr.outputs.registry }}/payment-service:latest
@@ -59,10 +59,10 @@ jobs:
       ######################################################
       - name: Terraform Init
         run: |
-          cd corelia/terraform
+          cd terraform
           terraform init
 
       - name: Terraform Apply
         run: |
-          cd corelia/terraform
+          cd terraform
           terraform apply -auto-approve
