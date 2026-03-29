@@ -102,7 +102,7 @@ Images stored in ECR (cheaper than S3 for containers)
 🟫 How to Deploy the Project
 
 1. Clone Repository
-git clone <(https://github.com/reem-elmezain/corelia-project)>
+git clone <https://github.com/reem-elmezain/corelia-project>
 2. Push to Main Branch
 Every push triggers CI/CD automatically.
 3. GitHub Actions Does:
