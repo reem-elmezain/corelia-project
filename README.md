@@ -1,3 +1,8 @@
+🟣Architecture
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/8dcdcbb6-ea13-40b1-8473-b5cc0933400c" />
+
+
+
 📌 Corelia Microservices Deployment 
 
 
@@ -134,8 +139,3 @@ Secure & scalable microservices foundation
 Cost-optimized AWS architecture
 Easy updates via CI/CD
 Infrastructure managed entirely as code
-
-
-[Architecture]
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/24f84403-3280-40e4-b318-84449159875e" />
-
