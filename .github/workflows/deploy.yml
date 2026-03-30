@@ -69,9 +69,13 @@ jobs:
       - name: Terraform Plan
         run: |
           cd terraform
-          terraform plan -out=tfplan
+          terraform plan
 
-      - name: Terraform Apply
+      - name: Terraform Apply (ECS only)
         run: |
           cd terraform
-          terraform apply -auto-approve tfplan
+          terraform apply -auto-approve \
+            -target=aws_ecs_cluster.main \
+            -target=aws_ecs_service.user_service \
+            -target=aws_ecs_service.order_service \
+            -target=aws_ecs_service.payment_service
